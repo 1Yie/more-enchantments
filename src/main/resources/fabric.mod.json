@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "more_enchantments",
+	"version": "${version}",
+	"name": "more_enchantments",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"ichiyo"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GPL-3.0",
+	"icon": "assets/more_enchantments/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "moe.ingstar.enchant.MoreEnchantments"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
