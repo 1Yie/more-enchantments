@@ -3,7 +3,7 @@ package moe.ingstar.enchant.Encantment.EnchantConfigs;
 import moe.ingstar.enchant.Encantment.ModEnchantments;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
+
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
@@ -36,10 +36,3 @@ public class HealthBoostHandler {
         return customEnchantmentLevel >= 1;
     }
 }
-
-
-
-
-
-
-

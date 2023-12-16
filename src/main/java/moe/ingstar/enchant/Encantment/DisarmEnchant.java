@@ -10,7 +10,6 @@ import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 
-
 public class DisarmEnchant extends Enchantment {
     protected DisarmEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(weight, target, slotTypes);
@@ -23,7 +22,7 @@ public class DisarmEnchant extends Enchantment {
 
     @Override
     public int getMaxPower(int level) {
-        return super.getMinLevel() * 8;
+        return level * 8;
     }
 
     @Override
@@ -31,29 +30,35 @@ public class DisarmEnchant extends Enchantment {
         return 1;
     }
 
+
     @Override
     public void onTargetDamaged(LivingEntity user, Entity targetEntity, int level) {
         if (user instanceof PlayerEntity && targetEntity instanceof LivingEntity
                 && !(targetEntity instanceof PlayerEntity)
                 && !(targetEntity instanceof VillagerEntity)) {
-            ItemStack heldItem = ((LivingEntity) targetEntity).getMainHandStack();
-
-            if (!heldItem.isEmpty()) {
-                ItemEntity itemEntity = new ItemEntity(targetEntity.getWorld(),
-                        targetEntity.getX(), targetEntity.getY(), targetEntity.getZ(), heldItem.copy());
-                targetEntity.getWorld().spawnEntity(itemEntity);
-                heldItem.setCount(0);
-            }
+            handleDisarm((LivingEntity) targetEntity);
         }
 
-        if (user instanceof PlayerEntity && targetEntity instanceof VillagerEntity) {
-            ItemStack heldItem = ((LivingEntity) targetEntity).getMainHandStack();
+        if (user instanceof PlayerEntity && targetEntity instanceof VillagerEntity villager) {
+            ItemStack heldItem = villager.getMainHandStack();
             if (!heldItem.isEmpty() && heldItem.isStackable()) {
-                ItemEntity itemEntity = new ItemEntity(targetEntity.getWorld(),
-                        targetEntity.getX(), targetEntity.getY(), targetEntity.getZ(), heldItem.copy());
-                targetEntity.getWorld().spawnEntity(itemEntity);
-                heldItem.setCount(0);
+                ItemEntity itemEntity = new ItemEntity(villager.getWorld(),
+                        villager.getX(), villager.getY(), villager.getZ(), heldItem.copy());
+                villager.getWorld().spawnEntity(itemEntity);
             }
+        }
+    }
+
+    private void handleDisarm(LivingEntity targetEntity) {
+        ItemStack heldItem = targetEntity.getMainHandStack();
+        if (!heldItem.isEmpty()) {
+            ItemStack newItemStack = heldItem.copy();
+            newItemStack.setDamage(heldItem.getDamage());
+
+            ItemEntity itemEntity = new ItemEntity(targetEntity.getWorld(),
+                    targetEntity.getX(), targetEntity.getY(), targetEntity.getZ(), newItemStack);
+            targetEntity.getWorld().spawnEntity(itemEntity);
+            heldItem.setCount(0);
         }
     }
 }
