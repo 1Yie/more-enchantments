@@ -9,6 +9,7 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
@@ -48,8 +49,10 @@ public class SoulPenetrationEnchant extends Enchantment {
             float armorValue = getTargetArmorValue(target);
 
             if (armorValue > 0 && level >= 1 && level <= 4) {
+                DamageSource damageSource = DamageSource.player((PlayerEntity) user);
+
                 float damageIncreasePercentage = calculateDamageIncreasePercentage(user, target, level, armorValue);
-                target.damage(user.getDamageSources().mobAttack(user), damageIncreasePercentage);
+                target.damage(damageSource, damageIncreasePercentage);
             }
         }
     }

@@ -19,6 +19,5 @@ public class MoreEnchantments implements ModInitializer {
 		DiamondLuckHandler.initialize();
 		LeechHandler.initialize();
 		HealthBoostHandler.initialize();
-		KissOfDeathHandler.initialize();
 	}
 }

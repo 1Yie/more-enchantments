@@ -8,7 +8,9 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Util;
 
 import java.util.Random;
 
@@ -50,7 +52,7 @@ public class LifeStealEnchant extends Enchantment {
                 int baseTriggerChance = 100 - (level - 1) * 20;
                 if (level >= getMinLevel() && level <= getMaxLevel() && random.nextInt(baseTriggerChance) + 1 == 1) {
                     user.heal(10);
-                    user.sendMessage(Text.translatable("enchantment.more_enchantments.key.life_steal").formatted(Formatting.DARK_RED));
+                    user.sendSystemMessage(new TranslatableText("enchantment.more_enchantments.key.life_steal"), Util.NIL_UUID);
                 }
             }
         }

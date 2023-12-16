@@ -5,9 +5,8 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 
 public class ModEnchantments {
@@ -47,16 +46,16 @@ public class ModEnchantments {
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
     public static void registerEnchantments() {
-        Registry.register(Registries.ENCHANTMENT, ARROW_SHIELD_ID, ARROW_SHIELD);
-        Registry.register(Registries.ENCHANTMENT, LIFE_STEAL_ID, LIFE_STEAL);
-        Registry.register(Registries.ENCHANTMENT, MIDAS_TOUCH_ID, MIDAS_TOUCH);
-        Registry.register(Registries.ENCHANTMENT, DIAMOND_LUCK_ID, DIAMOND_LUCK);
-        Registry.register(Registries.ENCHANTMENT, LEECH_ID, LEECH);
-        Registry.register(Registries.ENCHANTMENT, SATURATION_ID, SATURATION);
-        Registry.register(Registries.ENCHANTMENT, HEALTH_BOOST_ARMOR_ID, HEALTH_BOOST_ARMOR);
-        Registry.register(Registries.ENCHANTMENT, DISARM_ID, DISARM);
-        Registry.register(Registries.ENCHANTMENT, SOUL_PENETRATION_ID, SOUL_PENETRATION);
-        Registry.register(Registries.ENCHANTMENT, THUMP_ID, THUMP);
-        Registry.register(Registries.ENCHANTMENT, KISS_OF_DEATH_ID, KISS_OF_DEATH);
+        Registry.register(Registry.ENCHANTMENT, ARROW_SHIELD_ID, ARROW_SHIELD);
+        Registry.register(Registry.ENCHANTMENT, LIFE_STEAL_ID, LIFE_STEAL);
+        Registry.register(Registry.ENCHANTMENT, MIDAS_TOUCH_ID, MIDAS_TOUCH);
+        Registry.register(Registry.ENCHANTMENT, DIAMOND_LUCK_ID, DIAMOND_LUCK);
+        Registry.register(Registry.ENCHANTMENT, LEECH_ID, LEECH);
+        Registry.register(Registry.ENCHANTMENT, SATURATION_ID, SATURATION);
+        Registry.register(Registry.ENCHANTMENT, HEALTH_BOOST_ARMOR_ID, HEALTH_BOOST_ARMOR);
+        Registry.register(Registry.ENCHANTMENT, DISARM_ID, DISARM);
+        Registry.register(Registry.ENCHANTMENT, SOUL_PENETRATION_ID, SOUL_PENETRATION);
+        Registry.register(Registry.ENCHANTMENT, THUMP_ID, THUMP);
+        Registry.register(Registry.ENCHANTMENT, KISS_OF_DEATH_ID, KISS_OF_DEATH);
     }
 }
