@@ -52,7 +52,7 @@ public class LifeStealEnchant extends Enchantment {
                 int baseTriggerChance = 100 - (level - 1) * 20;
                 if (level >= getMinLevel() && level <= getMaxLevel() && random.nextInt(baseTriggerChance) + 1 == 1) {
                     user.heal(10);
-                    user.sendSystemMessage(new TranslatableText("enchantment.more_enchantments.key.life_steal"), Util.NIL_UUID);
+                    user.sendSystemMessage(new TranslatableText("enchantment.more_enchantments.key.life_steal").formatted(Formatting.DARK_RED), Util.NIL_UUID);
                 }
             }
         }

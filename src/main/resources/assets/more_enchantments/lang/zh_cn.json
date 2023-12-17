@@ -10,6 +10,13 @@
   "enchantment.more_enchantments.midas_touch": "点石成金",
   "enchantment.more_enchantments.arrow_shield": "暗箭易防",
   "enchantment.more_enchantments.kiss_of_death": "死神之吻",
+  "enchantment.more_enchantments.container_or_heart": "心之容器",
+  "enchantment.more_enchantments.benevolence": "仁爱",
 
-  "enchantment.more_enchantments.key.life_steal": "真理之选择，恢复所有HP！"
+  "item.more_enchantments.container_or_heart":"心之容器",
+
+  "enchantment.more_enchantments.key.life_steal": "真理之选择，恢复所有HP！",
+
+  "item.more_enchantments.health_box.tooltip_1": "凝聚着生命的宝石",
+  "item.more_enchantments.health_box.tooltip_2": "右键使用可恢复少量生命值"
 }

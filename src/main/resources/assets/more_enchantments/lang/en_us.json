@@ -1,0 +1,22 @@
+{
+  "enchantment.more_enchantments.life_steal": "Blessed Recovery",
+  "enchantment.more_enchantments.thump": "Heavy Blow",
+  "enchantment.more_enchantments.saturation": "Satiety",
+  "enchantment.more_enchantments.soul_penetration": "Soul Penetration",
+  "enchantment.more_enchantments.disarm": "Disarm",
+  "enchantment.more_enchantments.leech": "Leech",
+  "enchantment.more_enchantments.diamond_luck": "Diamond Everywhere",
+  "enchantment.more_enchantments.health_boost_armor": "Vibrant Health",
+  "enchantment.more_enchantments.midas_touch": "Touch of Gold",
+  "enchantment.more_enchantments.arrow_shield": "Arrow Shield",
+  "enchantment.more_enchantments.kiss_of_death": "Kiss of Death",
+  "enchantment.more_enchantments.container_or_heart": "Heart Container",
+  "enchantment.more_enchantments.benevolence": "Benevolence",
+
+  "item.more_enchantments.container_or_heart": "Heart Container",
+
+  "enchantment.more_enchantments.key.life_steal": "Choose Truth, Restore All HP!",
+
+  "item.more_enchantments.health_box.tooltip_1": "A gem imbued with the essence of life",
+  "item.more_enchantments.health_box.tooltip_2": "Right-click to restore a small amount of health"
+}
