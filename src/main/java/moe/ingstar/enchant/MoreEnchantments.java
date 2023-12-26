@@ -3,6 +3,7 @@ package moe.ingstar.enchant;
 import moe.ingstar.enchant.Encantment.EnchantConfigs.*;
 import moe.ingstar.enchant.Encantment.ModEnchantments;
 import moe.ingstar.enchant.Item.ItemRegister;
+import moe.ingstar.enchant.StatusEffect.BuffEffectRegistry;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -19,9 +20,6 @@ public class MoreEnchantments implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
-
-
 		ModEnchantments.registerEnchantments();
 		ItemRegister.register();
 
@@ -32,5 +30,10 @@ public class MoreEnchantments implements ModInitializer {
 		KissOfDeathHandler.initialize();
 		BenevolenceHandler.initialize();
 		ContainerOfHeartHandler.initialize();
+		TetanusBladeEnchantHandler.initialize();
+		AbsoluteImmunityHandler.initialize();
+		DeathAsHomeHandler.initialize();
+
+		BuffEffectRegistry.register();
 	}
 }

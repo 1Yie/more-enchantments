@@ -10,13 +10,19 @@
   "enchantment.more_enchantments.midas_touch": "点石成金",
   "enchantment.more_enchantments.arrow_shield": "暗箭易防",
   "enchantment.more_enchantments.kiss_of_death": "死神之吻",
-  "enchantment.more_enchantments.container_or_heart": "心之容器",
+  "enchantment.more_enchantments.container_of_heart": "心之容器",
   "enchantment.more_enchantments.benevolence": "仁爱",
+  "enchantment.more_enchantments.tetanus_blade": "破伤风",
+  "enchantment.more_enchantments.absolute_immunity": "绝对免疫",
+  "enchantment.more_enchantments.death_as_home": "视死如归",
 
-  "item.more_enchantments.container_or_heart":"心之容器",
+  "effect.more_enchantments.tetanus": "破伤风",
+
+  "item.more_enchantments.container_of_heart": "心之容器",
 
   "enchantment.more_enchantments.key.life_steal": "真理之选择，恢复所有HP！",
+  "enchantment.more_enchantments.key.absolute_immunity": "绝对免疫！",
 
-  "item.more_enchantments.health_box.tooltip_1": "凝聚着生命的宝石",
-  "item.more_enchantments.health_box.tooltip_2": "右键使用可恢复少量生命值"
+  "item.more_enchantments.container_of_heart.tooltip_1": "凝聚着生命的宝石",
+  "item.more_enchantments.container_of_heart.tooltip_2": "右键使用可恢复少量生命值"
 }

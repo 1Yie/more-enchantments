@@ -14,6 +14,8 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import java.util.Random;
+
 public class ArrowShieldEnchant extends Enchantment {
     protected ArrowShieldEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(rarity, target, slotTypes);
@@ -21,7 +23,7 @@ public class ArrowShieldEnchant extends Enchantment {
 
     @Override
     public int getMaxLevel() {
-        return 1;
+        return 3;
     }
 
     @Override
@@ -45,10 +47,11 @@ public class ArrowShieldEnchant extends Enchantment {
     @Override
     public void onUserDamaged(LivingEntity user, Entity attacker, int level) {
         if (attacker instanceof LivingEntity) {
+            Random random = new Random();
+            int baseProbability = 20;
+            int levelMultiplier = baseProbability * level;
 
-            System.out.println(user.getHealth());
-            System.out.println(user.getRecentDamageSource());
-            if (true) {
+            if (random.nextInt(100) + 1 <= levelMultiplier) {
                 if (isFatalDamage(user.getRecentDamageSource())) {
                     user.addStatusEffect(new StatusEffectInstance(
                             StatusEffects.RESISTANCE,
@@ -58,7 +61,6 @@ public class ArrowShieldEnchant extends Enchantment {
                             false
                     ));
                 }
-
             }
         }
     }

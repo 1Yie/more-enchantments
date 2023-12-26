@@ -22,8 +22,11 @@ public class ModEnchantments {
     public static final Identifier SOUL_PENETRATION_ID = new Identifier(MoreEnchantments.MOD_ID, "soul_penetration");
     public static final Identifier THUMP_ID = new Identifier(MoreEnchantments.MOD_ID, "thump");
     public static final Identifier KISS_OF_DEATH_ID = new Identifier(MoreEnchantments.MOD_ID, "kiss_of_death");
-    public static final Identifier CONTAINER_OR_HEART_ID = new Identifier(MoreEnchantments.MOD_ID, "container_or_heart");
+    public static final Identifier CONTAINER_OR_HEART_ID = new Identifier(MoreEnchantments.MOD_ID, "container_of_heart");
     public static final Identifier BENEVOLENCE_ID = new Identifier(MoreEnchantments.MOD_ID, "benevolence");
+    public static final Identifier TETANUS_BLADE_ID = new Identifier(MoreEnchantments.MOD_ID, "tetanus_blade");
+    public static final Identifier ABSOLUT_IMMUNITY_ID = new Identifier(MoreEnchantments.MOD_ID, "absolute_immunity");
+    public static final Identifier DEATH_AS_HOME_ID = new Identifier(MoreEnchantments.MOD_ID, "death_as_home");
 
     public static final Enchantment ARROW_SHIELD = new ArrowShieldEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
@@ -47,10 +50,16 @@ public class ModEnchantments {
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
     public static final Enchantment KISS_OF_DEATH = new KissOfDeathEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
-    public static final Enchantment CONTAINER_OR_HEART = new ContainerOfHeartEnchant(Enchantment.Rarity.RARE,
+    public static final Enchantment CONTAINER_OF_HEART = new ContainerOfHeartEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
     public static final Enchantment BENEVOLENCE = new BenevolenceEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+    public static final Enchantment TETANUS_BLADE = new TetanusBladeEnchant(Enchantment.Rarity.RARE,
+            EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+    public static final Enchantment ABSOLUT_IMMUNITY = new AbsoluteImmunityEnchant(Enchantment.Rarity.RARE,
+            EnchantmentTarget.ARMOR, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+    public static final Enchantment DEATH_AS_HOME = new DeathAsHomeEnchant(Enchantment.Rarity.RARE,
+            EnchantmentTarget.ARMOR, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
     public static void registerEnchantments() {
         Registry.register(Registries.ENCHANTMENT, ARROW_SHIELD_ID, ARROW_SHIELD);
@@ -64,7 +73,10 @@ public class ModEnchantments {
         Registry.register(Registries.ENCHANTMENT, SOUL_PENETRATION_ID, SOUL_PENETRATION);
         Registry.register(Registries.ENCHANTMENT, THUMP_ID, THUMP);
         Registry.register(Registries.ENCHANTMENT, KISS_OF_DEATH_ID, KISS_OF_DEATH);
-        Registry.register(Registries.ENCHANTMENT, CONTAINER_OR_HEART_ID, CONTAINER_OR_HEART);
-        Registry.register(Registries.ENCHANTMENT,BENEVOLENCE_ID, BENEVOLENCE);
+        Registry.register(Registries.ENCHANTMENT, CONTAINER_OR_HEART_ID, CONTAINER_OF_HEART);
+        Registry.register(Registries.ENCHANTMENT, BENEVOLENCE_ID, BENEVOLENCE);
+        Registry.register(Registries.ENCHANTMENT, TETANUS_BLADE_ID, TETANUS_BLADE);
+        Registry.register(Registries.ENCHANTMENT, ABSOLUT_IMMUNITY_ID, ABSOLUT_IMMUNITY);
+        Registry.register(Registries.ENCHANTMENT, DEATH_AS_HOME_ID, DEATH_AS_HOME);
     }
 }

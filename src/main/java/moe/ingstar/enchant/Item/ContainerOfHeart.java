@@ -24,8 +24,8 @@ public class ContainerOfHeart extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.more_enchantments.health_box.tooltip_1").formatted(Formatting.RED));
-        tooltip.add(Text.translatable("item.more_enchantments.health_box.tooltip_2").formatted(Formatting.DARK_GRAY));
+        tooltip.add(Text.translatable("item.more_enchantments.container_of_heart.tooltip_1").formatted(Formatting.RED));
+        tooltip.add(Text.translatable("item.more_enchantments.container_of_heart.tooltip_2").formatted(Formatting.DARK_GRAY));
     }
 
     @Override

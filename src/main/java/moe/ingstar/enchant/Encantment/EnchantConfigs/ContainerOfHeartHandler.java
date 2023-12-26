@@ -31,7 +31,7 @@ public class ContainerOfHeartHandler {
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {
-            content.addAfter(Items.ENDER_EYE, ItemRegister.CONTAINER_OR_HEART);
+            content.addAfter(Items.ENDER_EYE, ItemRegister.CONTAINER_OF_HEART);
         });
     }
 
@@ -39,13 +39,13 @@ public class ContainerOfHeartHandler {
         Box boundingBox = livingEntity.getBoundingBox();
         double bottomY = boundingBox.minY;
 
-        ItemStack containerOfHeartStack = new ItemStack(ItemRegister.CONTAINER_OR_HEART);
+        ItemStack containerOfHeartStack = new ItemStack(ItemRegister.CONTAINER_OF_HEART);
         net.minecraft.entity.ItemEntity itemEntity = new net.minecraft.entity.ItemEntity(world,
                 pos.getX() + 0.5, bottomY, pos.getZ() + 0.5, containerOfHeartStack);
         world.spawnEntity(itemEntity);
     }
 
     private static boolean hasRequiredEnchantment(ItemStack itemStack) {
-        return EnchantmentHelper.getLevel(ModEnchantments.CONTAINER_OR_HEART, itemStack) > 0;
+        return EnchantmentHelper.getLevel(ModEnchantments.CONTAINER_OF_HEART, itemStack) > 0;
     }
 }

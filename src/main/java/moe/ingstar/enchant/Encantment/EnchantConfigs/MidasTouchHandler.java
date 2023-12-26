@@ -58,9 +58,9 @@ public class MidasTouchHandler {
     }
 
     private static void dropBlocks(World world, BlockPos pos) {
-        ItemStack diamondStack = new ItemStack(Items.GOLD_NUGGET);
+        ItemStack itemStack = new ItemStack(Items.GOLD_NUGGET);
         net.minecraft.entity.ItemEntity itemEntity = new net.minecraft.entity.ItemEntity(world,
-                pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, diamondStack);
+                pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, itemStack);
         world.spawnEntity(itemEntity);
     }
 }

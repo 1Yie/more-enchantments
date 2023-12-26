@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "more_enchantments:item/container_or_heart"
+    "layer0": "more_enchantments:item/container_of_heart"
   }
 }

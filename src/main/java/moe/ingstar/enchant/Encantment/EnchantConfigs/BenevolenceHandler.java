@@ -1,16 +1,14 @@
 package moe.ingstar.enchant.Encantment.EnchantConfigs;
 
 import moe.ingstar.enchant.Encantment.ModEnchantments;
-import moe.ingstar.enchant.Item.ItemRegister;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemGroups;
+
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.util.ActionResult;
 
 public class BenevolenceHandler {
