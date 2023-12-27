@@ -43,7 +43,6 @@ public class NbtHelper {
         stack.getNbt().putLong(keyName, value);
     }
 
-    // 新增的方法，用于从 NBT 读取数据
     public static long readFromNbt(ItemStack stack, String keyName) {
         initCompoundNBT(stack);
 

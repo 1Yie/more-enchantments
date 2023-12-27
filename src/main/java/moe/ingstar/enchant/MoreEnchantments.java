@@ -16,8 +16,6 @@ public class MoreEnchantments implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("more_enchantments");
 	public static final String MOD_ID = "more_enchantments";
 
-
-
 	@Override
 	public void onInitialize() {
 		ModEnchantments.registerEnchantments();
@@ -33,6 +31,7 @@ public class MoreEnchantments implements ModInitializer {
 		TetanusBladeEnchantHandler.initialize();
 		AbsoluteImmunityHandler.initialize();
 		DeathAsHomeHandler.initialize();
+		AreaDestructionHandler.initialize();
 
 		BuffEffectRegistry.register();
 	}

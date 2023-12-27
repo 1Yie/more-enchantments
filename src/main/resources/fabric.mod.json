@@ -2,14 +2,14 @@
 	"schemaVersion": 1,
 	"id": "more_enchantments",
 	"version": "${version}",
-	"name": "more_enchantments",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "More Enchantments",
+	"description": "Add more enchantments to Minecraft.",
 	"authors": [
 		"ichiyo"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/1Yie/more-enchantments",
+		"sources": "https://github.com/1Yie/more-enchantments"
 	},
 	"license": "GPL-3.0",
 	"icon": "assets/more_enchantments/icon.png",
@@ -21,7 +21,7 @@
 	},
 	"depends": {
 		"fabricloader": ">=0.15.0",
-		"minecraft": "~1.20.4",
+		"minecraft": "~1.20",
 		"java": ">=17",
 		"fabric-api": "*"
 	},

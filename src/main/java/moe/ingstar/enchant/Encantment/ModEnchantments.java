@@ -27,6 +27,7 @@ public class ModEnchantments {
     public static final Identifier TETANUS_BLADE_ID = new Identifier(MoreEnchantments.MOD_ID, "tetanus_blade");
     public static final Identifier ABSOLUT_IMMUNITY_ID = new Identifier(MoreEnchantments.MOD_ID, "absolute_immunity");
     public static final Identifier DEATH_AS_HOME_ID = new Identifier(MoreEnchantments.MOD_ID, "death_as_home");
+    public static final Identifier AREA_DESTRUCTION_Id = new Identifier(MoreEnchantments.MOD_ID, "area_destruction");
 
     public static final Enchantment ARROW_SHIELD = new ArrowShieldEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
@@ -60,6 +61,8 @@ public class ModEnchantments {
             EnchantmentTarget.ARMOR, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
     public static final Enchantment DEATH_AS_HOME = new DeathAsHomeEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.ARMOR, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+    public static final Enchantment AREA_DESTRUCTION = new AreaDestructionEnchant(Enchantment.Rarity.RARE,
+            EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
     public static void registerEnchantments() {
         Registry.register(Registries.ENCHANTMENT, ARROW_SHIELD_ID, ARROW_SHIELD);
@@ -78,5 +81,6 @@ public class ModEnchantments {
         Registry.register(Registries.ENCHANTMENT, TETANUS_BLADE_ID, TETANUS_BLADE);
         Registry.register(Registries.ENCHANTMENT, ABSOLUT_IMMUNITY_ID, ABSOLUT_IMMUNITY);
         Registry.register(Registries.ENCHANTMENT, DEATH_AS_HOME_ID, DEATH_AS_HOME);
+        Registry.register(Registries.ENCHANTMENT, AREA_DESTRUCTION_Id, AREA_DESTRUCTION);
     }
 }
