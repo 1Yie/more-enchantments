@@ -16,16 +16,8 @@ import net.minecraft.world.World;
 public class AreaDestructionHandler {
     public static void initialize() {
         PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {
-
             Direction playerFacing = player.getHorizontalFacing();
 
-            if (player.getPitch() >= -90 && player.getPitch() < -40) {
-                System.out.println("UP");
-            } else if (player.getPitch() > 20) {
-                System.out.println("DOWN");
-            } else {
-                System.out.println("W,S,N,E");
-            }
             if (hasCustomEnchantment(player.getMainHandStack())) {
                 if (player.getPitch() >= -90 && player.getPitch() < -40) {
                     destroyBlocksHorizontally(world, player, pos, playerFacing);
