@@ -57,8 +57,6 @@ public class AreaDestructionHandler {
                         targetBlock.afterBreak(world, player, targetPos, targetState, null, player.getMainHandStack());
                         world.breakBlock(targetPos, true, player);
                         targetBlock.afterBreak(world, player, targetPos, targetState, null, player.getMainHandStack());
-
-                        player.getMainHandStack().damage(1, player, (p -> p.sendToolBreakStatus(Hand.MAIN_HAND)));
                     }
                 }
             }
