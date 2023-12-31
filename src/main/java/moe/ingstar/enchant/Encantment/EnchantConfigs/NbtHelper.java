@@ -1,6 +1,5 @@
 package moe.ingstar.enchant.Encantment.EnchantConfigs;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 
@@ -8,7 +7,6 @@ public class NbtHelper {
     public static boolean hasNbt(ItemStack itemStack, String keyName) {
         return !itemStack.isEmpty() && itemStack.getNbt() != null && itemStack.getNbt().contains(keyName);
     }
-
     private static void initCompoundNBT(ItemStack itemStack) {
         if (itemStack.getNbt() == null) {
             itemStack.setNbt(new NbtCompound());

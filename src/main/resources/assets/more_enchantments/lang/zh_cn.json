@@ -23,6 +23,9 @@
 
   "enchantment.more_enchantments.key.life_steal": "真理之选择，恢复所有HP！",
   "enchantment.more_enchantments.key.absolute_immunity": "绝对免疫！",
+  "enchantment.translatable.death_as_home.used": "视死如归: 抵挡一次致命伤害",
+  "enchantment.translatable.death_as_home.done": "视死如归: 冷却结束",
+  "enchantment.translatable.death_as_home.cooldown": "视死如归冷却: %s 秒",
 
   "item.more_enchantments.container_of_heart.tooltip_1": "凝聚着生命的宝石",
   "item.more_enchantments.container_of_heart.tooltip_2": "右键使用可恢复少量生命值"

@@ -23,6 +23,9 @@
 
   "enchantment.more_enchantments.key.life_steal": "Choose Truth, Restore All HP!",
   "enchantment.more_enchantments.key.absolute_immunity": "Absolute Immunity!",
+  "enchantment.translatable.death_as_home.used": "Death as Home: Resist fatal damage once",
+  "enchantment.translatable.death_as_home.done": "Death as Home: Cooldown finished",
+  "enchantment.translatable.death_as_home.cooldown": "Death as Home Cooldown: %s seconds",
 
   "item.more_enchantments.container_of_heart.tooltip_1": "A gem imbued with the essence of life",
   "item.more_enchantments.container_of_heart.tooltip_2": "Right-click to restore a small amount of health"

@@ -4,7 +4,7 @@ import moe.ingstar.enchant.Encantment.ModEnchantments;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
+
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -51,8 +51,6 @@ public class AreaDestructionHandler {
                     BlockState targetState = world.getBlockState(targetPos);
                     Block targetBlock = targetState.getBlock();
 
-                    System.out.println(targetBlock);
-
                     if (targetBlock.getHardness() > -1.0) {
                         targetBlock.afterBreak(world, player, targetPos, targetState, null, player.getMainHandStack());
                         world.breakBlock(targetPos, true, player);
@@ -84,7 +82,7 @@ public class AreaDestructionHandler {
                     Block targetBlock = targetState.getBlock();
 
                     if (targetBlock.getHardness() > -1.0) {
-                        System.out.println(targetBlock.getHardness());
+
                         targetBlock.afterBreak(world, player, targetPos, targetState, null, player.getMainHandStack());
                         world.breakBlock(targetPos, true, player);
                         targetBlock.afterBreak(world, player, targetPos, targetState, null, player.getMainHandStack());
