@@ -5,14 +5,14 @@ import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
-
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 
 import java.util.Random;
 
 public class AbsoluteImmunityHandler {
     public static void initialize() {
+
         ServerLivingEntityEvents.ALLOW_DAMAGE.register((entity, source, amount) -> {
             if (entity instanceof PlayerEntity player) {
                 if (entity.getAttacking() != null && hasRequiredEnchantment(player)) {
@@ -28,7 +28,7 @@ public class AbsoluteImmunityHandler {
         for (ItemStack itemStack : player.getArmorItems()) {
             int level = EnchantmentHelper.getLevel(ModEnchantments.ABSOLUT_IMMUNITY, itemStack);
             if (random.nextDouble() < 0.1 * level) {
-                player.sendMessage(Text.translatable("enchantment.more_enchantments.key.absolute_immunity").formatted(Formatting.YELLOW), true);
+                player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
                 return true;
             }
         }

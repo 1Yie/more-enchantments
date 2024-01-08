@@ -9,6 +9,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
 
 public class DisarmEnchant extends Enchantment {
     protected DisarmEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
@@ -30,6 +31,10 @@ public class DisarmEnchant extends Enchantment {
         return 1;
     }
 
+    @Override
+    public boolean isAcceptableItem(ItemStack stack) {
+        return stack.getItem() instanceof SwordItem;
+    }
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity targetEntity, int level) {
@@ -61,4 +66,5 @@ public class DisarmEnchant extends Enchantment {
             heldItem.setCount(0);
         }
     }
+
 }

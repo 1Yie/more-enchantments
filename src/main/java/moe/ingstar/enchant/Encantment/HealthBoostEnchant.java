@@ -14,8 +14,7 @@ public class HealthBoostEnchant extends Enchantment {
     }
     @Override
     public boolean isAcceptableItem(ItemStack stack) {
-        Item item = stack.getItem();
-        return super.isAcceptableItem(stack) && (item instanceof ArmorItem && ((ArmorItem) item).getSlotType() == EquipmentSlot.CHEST);
+        return stack.getItem() instanceof ArmorItem armorItem && armorItem.getSlotType() == EquipmentSlot.CHEST;
     }
 
     @Override

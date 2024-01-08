@@ -1,26 +1,29 @@
 package moe.ingstar.enchant;
 
+import moe.ingstar.enchant.Command.ModInfoCommand;
 import moe.ingstar.enchant.Encantment.EnchantConfigs.*;
 import moe.ingstar.enchant.Encantment.ModEnchantments;
 import moe.ingstar.enchant.Item.ItemRegister;
 import moe.ingstar.enchant.StatusEffect.BuffEffectRegistry;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
+import net.minecraft.text.Text;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MoreEnchantments implements ModInitializer {
-    public static final Logger LOGGER = LoggerFactory.getLogger("more_enchantments");
+    public static final Logger LOGGER = LoggerFactory.getLogger("More Enchantments");
 	public static final String MOD_ID = "more_enchantments";
 
 	@Override
 	public void onInitialize() {
+		LOGGER.info("Loaded correctly. Mod's namespace is: " + MOD_ID);
+
 		ModEnchantments.registerEnchantments();
 		ItemRegister.register();
 
+		ModInfoCommand.initialize();
 		MidasTouchHandler.initialize();
 		DiamondLuckHandler.initialize();
 		LeechHandler.initialize();
@@ -35,4 +38,5 @@ public class MoreEnchantments implements ModInitializer {
 
 		BuffEffectRegistry.register();
 	}
+
 }

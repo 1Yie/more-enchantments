@@ -39,9 +39,7 @@ public class ArrowShieldEnchant extends Enchantment {
 
     @Override
     public boolean isAcceptableItem(ItemStack stack) {
-        Item item = stack.getItem();
-        return super.isAcceptableItem(stack) && (item instanceof ArmorItem
-                && ((ArmorItem) item).getSlotType() == EquipmentSlot.HEAD);
+        return stack.getItem() instanceof ArmorItem armorItem && armorItem.getSlotType() == EquipmentSlot.HEAD;
     }
 
     @Override
@@ -68,5 +66,4 @@ public class ArrowShieldEnchant extends Enchantment {
     private static boolean isFatalDamage(DamageSource damageSource) {
         return damageSource != null && damageSource.isOf(DamageTypes.ARROW);
     }
-
 }

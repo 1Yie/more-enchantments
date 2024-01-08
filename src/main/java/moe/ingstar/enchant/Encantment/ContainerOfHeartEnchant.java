@@ -3,6 +3,8 @@ package moe.ingstar.enchant.Encantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
 
 public class ContainerOfHeartEnchant extends Enchantment {
     protected ContainerOfHeartEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
@@ -22,5 +24,10 @@ public class ContainerOfHeartEnchant extends Enchantment {
     @Override
     public int getMaxLevel() {
         return 1;
+    }
+
+    @Override
+    public boolean isAcceptableItem(ItemStack stack) {
+        return stack.getItem() instanceof SwordItem;
     }
 }

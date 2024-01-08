@@ -7,6 +7,8 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.ItemStack;
 
 public class ThumpEnchant extends Enchantment {
     protected ThumpEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
@@ -26,6 +28,11 @@ public class ThumpEnchant extends Enchantment {
     @Override
     public int getMaxLevel() {
         return 3;
+    }
+
+    @Override
+    public boolean isAcceptableItem(ItemStack stack) {
+        return stack.getItem() instanceof AxeItem;
     }
 
     @Override

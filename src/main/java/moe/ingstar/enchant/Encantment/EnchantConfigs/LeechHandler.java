@@ -11,7 +11,6 @@ public class LeechHandler {
     public static void initialize() {
         AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
             if (entity instanceof LivingEntity) {
-                LivingEntity target = (LivingEntity) entity;
                 float damage = getAttackDamage(player);
                 DamageData.setDamage(damage);
             }

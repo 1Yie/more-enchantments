@@ -5,6 +5,7 @@ import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.ShovelItem;
 
 public class AreaDestructionEnchant extends Enchantment {
     protected AreaDestructionEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
@@ -29,6 +30,6 @@ public class AreaDestructionEnchant extends Enchantment {
 
     @Override
     public boolean isAcceptableItem(ItemStack stack) {
-        return stack.getItem() instanceof PickaxeItem;
+        return stack.getItem() instanceof PickaxeItem || stack.getItem() instanceof ShovelItem;
     }
 }
