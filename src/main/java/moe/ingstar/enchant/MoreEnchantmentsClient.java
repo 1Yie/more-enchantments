@@ -30,17 +30,18 @@ public class MoreEnchantmentsClient implements ClientModInitializer {
         ));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            Text yes = Text.translatable("yes");
+            Text no = Text.translatable("no");
+
             if (client.player != null) {
                 ItemStack itemStack = client.player.getMainHandStack();
-                Text yes = Text.translatable("yes");
-                Text no = Text.translatable("no");
 
                 while (areaDestructionToggle.wasPressed() && hasSpecificEnchantment(itemStack)) {
                     areaDestructionToggleKey = !areaDestructionToggleKey;
                     boolean toggleState = areaDestructionToggleKey;
+
                     sendToggleAreaDestructionPacketToServer(toggleState);
                     client.player.sendMessage(Text.translatable("message.enchant.area_destruction", (toggleState ? yes : no)));
-                    MoreEnchantments.LOGGER.info("[Client] [Area Destruction - KeyBinding]" + " ToggleState: " + toggleState + ", Key: " + areaDestructionToggleKey + ", Toggle: " + areaDestructionToggle);
                 }
             }
         });

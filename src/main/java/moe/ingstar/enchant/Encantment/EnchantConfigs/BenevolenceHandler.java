@@ -21,6 +21,8 @@ public class BenevolenceHandler {
                 if (hasRequiredEnchantment(mainHandItem)) {
                     float damageAmount = getAttackDamage(player);
                     targetEntity.heal(damageAmount);
+
+                    System.out.println(hitResult);
                 }
             }
             return ActionResult.PASS;

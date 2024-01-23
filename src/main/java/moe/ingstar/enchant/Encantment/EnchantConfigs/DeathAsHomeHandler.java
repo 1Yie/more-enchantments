@@ -25,7 +25,7 @@ public class DeathAsHomeHandler {
 
 
     private static final Map<ServerPlayerEntity, Long> immunityCooldowns = new HashMap<>();
-    private static final long IMMUNITY_DURATION = 75 * 20;
+    private static final long IMMUNITY_DURATION = 80 * 20;
 
 
     public static void initialize() {

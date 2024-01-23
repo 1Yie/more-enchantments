@@ -64,6 +64,7 @@ public class ModEnchantments {
     public static final Enchantment AREA_DESTRUCTION = new AreaDestructionEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
+
     public static void registerEnchantments() {
         Registry.register(Registries.ENCHANTMENT, ARROW_SHIELD_ID, ARROW_SHIELD);
         Registry.register(Registries.ENCHANTMENT, LIFE_STEAL_ID, LIFE_STEAL);

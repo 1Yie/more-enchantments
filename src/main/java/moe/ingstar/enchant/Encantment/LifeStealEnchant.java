@@ -41,6 +41,14 @@ public class LifeStealEnchant extends Enchantment {
     }
 
     @Override
+    protected boolean canAccept(Enchantment other) {
+        if (other instanceof LeechEnchant) {
+            return false;
+        }
+        return super.canAccept(other);
+    }
+
+    @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
 
         if (target instanceof LivingEntity && !target.getWorld().isClient) {

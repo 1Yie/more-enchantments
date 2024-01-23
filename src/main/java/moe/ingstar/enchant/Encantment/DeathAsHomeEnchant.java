@@ -27,6 +27,14 @@ public class DeathAsHomeEnchant extends Enchantment {
     }
 
     @Override
+    protected boolean canAccept(Enchantment other) {
+        if (other instanceof AbsoluteImmunityEnchant) {
+            return false;
+        }
+        return super.canAccept(other);
+    }
+
+    @Override
     public boolean isAcceptableItem(ItemStack stack) {
         return stack.getItem() instanceof ArmorItem armorItem && armorItem.getSlotType() == EquipmentSlot.CHEST;
     }
