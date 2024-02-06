@@ -17,7 +17,7 @@ import java.util.Objects;
 
 
 public class SoulPenetrationDamageSource extends DamageSource {
-    public static final RegistryEntry<DamageType> DAMAGE_TYPE_REGISTRY_ENTRY = RegistryEntry.of(new DamageType("seacurse_killed", 0.1F, DamageEffects.BURNING));
+    public static final RegistryEntry<DamageType> DAMAGE_TYPE_REGISTRY_ENTRY = RegistryEntry.of(new DamageType("soulpenetration_killed", 0.1F, DamageEffects.BURNING));
 
     public SoulPenetrationDamageSource(@Nullable Entity source, @Nullable Entity attacker) {
         super(DAMAGE_TYPE_REGISTRY_ENTRY, source, attacker);

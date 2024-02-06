@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class TetanusDamageSource extends DamageSource {
-    public static final RegistryEntry<DamageType> DAMAGE_TYPE_REGISTRY_ENTRY = RegistryEntry.of(new DamageType("seacurse_killed", 0.1F, DamageEffects.BURNING));
+    public static final RegistryEntry<DamageType> DAMAGE_TYPE_REGISTRY_ENTRY = RegistryEntry.of(new DamageType("tetanus_killed", 0.1F, DamageEffects.BURNING));
 
     public TetanusDamageSource(@Nullable Entity source, @Nullable Entity attacker) {
         super(DAMAGE_TYPE_REGISTRY_ENTRY, source, attacker);
