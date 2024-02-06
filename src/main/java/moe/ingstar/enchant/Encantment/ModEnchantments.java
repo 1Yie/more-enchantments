@@ -28,6 +28,9 @@ public class ModEnchantments {
     public static final Identifier ABSOLUT_IMMUNITY_ID = new Identifier(MoreEnchantments.MOD_ID, "absolute_immunity");
     public static final Identifier DEATH_AS_HOME_ID = new Identifier(MoreEnchantments.MOD_ID, "death_as_home");
     public static final Identifier AREA_DESTRUCTION_Id = new Identifier(MoreEnchantments.MOD_ID, "area_destruction");
+    public static final Identifier BACKSTABBER_ID = new Identifier(MoreEnchantments.MOD_ID, "backstabber");
+    public static final Identifier LOSTCURSE_ID = new Identifier(MoreEnchantments.MOD_ID, "lostcurse");
+    public static final Identifier SEACURSE_ID = new Identifier(MoreEnchantments.MOD_ID, "seacurse");
 
     public static final Enchantment ARROW_SHIELD = new ArrowShieldEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
@@ -64,6 +67,13 @@ public class ModEnchantments {
     public static final Enchantment AREA_DESTRUCTION = new AreaDestructionEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
+    public static final Enchantment BACKSTABBER = new BackstabberEnchant(Enchantment.Rarity.RARE,
+            EnchantmentTarget.ARMOR, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+    public static final Enchantment LOSTCURSE = new LostCurseEnchant(Enchantment.Rarity.VERY_RARE,
+            EnchantmentTarget.VANISHABLE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+    public static final Enchantment SEACURSE = new SeaCurseEnchant(Enchantment.Rarity.VERY_RARE,
+            EnchantmentTarget.VANISHABLE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+
 
     public static void registerEnchantments() {
         Registry.register(Registries.ENCHANTMENT, ARROW_SHIELD_ID, ARROW_SHIELD);
@@ -83,5 +93,8 @@ public class ModEnchantments {
         Registry.register(Registries.ENCHANTMENT, ABSOLUT_IMMUNITY_ID, ABSOLUT_IMMUNITY);
         Registry.register(Registries.ENCHANTMENT, DEATH_AS_HOME_ID, DEATH_AS_HOME);
         Registry.register(Registries.ENCHANTMENT, AREA_DESTRUCTION_Id, AREA_DESTRUCTION);
+        Registry.register(Registries.ENCHANTMENT, BACKSTABBER_ID, BACKSTABBER);
+        Registry.register(Registries.ENCHANTMENT, LOSTCURSE_ID, LOSTCURSE);
+        Registry.register(Registries.ENCHANTMENT, SEACURSE_ID, SEACURSE);
     }
 }

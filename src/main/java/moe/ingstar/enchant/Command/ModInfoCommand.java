@@ -115,5 +115,15 @@ public class ModInfoCommand {
         source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
         source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.area_destruction.title").copy().formatted(Formatting.BOLD));
         source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.area_destruction.context"));
+        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
+        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.backstabber.title").copy().formatted(Formatting.BOLD));
+        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.backstabber.context"));
+        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
+        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.lostcurse.title").copy().formatted(Formatting.BOLD));
+        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.lostcurse.context"));
+        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
+        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.seacurse.title").copy().formatted(Formatting.BOLD));
+        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.seacurse.context"));
+
     }
 }

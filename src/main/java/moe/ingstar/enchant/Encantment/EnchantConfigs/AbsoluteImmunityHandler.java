@@ -43,7 +43,7 @@ public class AbsoluteImmunityHandler {
 
         for (ItemStack itemStack : player.getArmorItems()) {
             int level = EnchantmentHelper.getLevel(ModEnchantments.ABSOLUT_IMMUNITY, itemStack);
-            if (random.nextDouble() < 0.07 * level) {
+            if (random.nextDouble() < 0.15 * level) {
                 player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
                 player.getEquippedStack(EquipmentSlot.CHEST).damage(2, player, (p -> p.getEquippedStack(EquipmentSlot.CHEST)));
                 cooldownMap.put(player, player.getWorld().getTime());

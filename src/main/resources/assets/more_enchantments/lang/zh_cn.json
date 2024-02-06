@@ -16,6 +16,9 @@
   "enchantment.more_enchantments.absolute_immunity": "绝对免疫",
   "enchantment.more_enchantments.death_as_home": "视死如归",
   "enchantment.more_enchantments.area_destruction": "盾构",
+  "enchantment.more_enchantments.backstabber": "背刺杀手",
+  "enchantment.more_enchantments.lostcurse": "丢弃诅咒",
+  "enchantment.more_enchantments.seacurse": "海洋诅咒",
 
   "effect.more_enchantments.tetanus": "破伤风",
 
@@ -36,6 +39,10 @@
 
   "item.more_enchantments.container_of_heart.tooltip_1": "凝聚着生命的宝石",
   "item.more_enchantments.container_of_heart.tooltip_2": "右键使用可恢复少量生命值",
+
+  "death.seacurse.killed": "%s被海洋吞噬了",
+  "death.tetanus.killed": "破伤风侵染%s全身致死",
+  "death.soulpenetration.killed": "%s被%s击穿了灵魂",
 
   "command.more_enchantment.me.info.enchant.none": " ",
   "command.more_enchantment.me.welcome.title": "[更多附魔]",
@@ -74,7 +81,13 @@
   "command.more_enchantment.me.info.enchant.absolute_immunity.title": "绝对免疫",
   "command.more_enchantment.me.info.enchant.absolute_immunity.context": "适用于：胸甲\n概率免疫一次伤害，随着附魔等级提升概率随之增大",
   "command.more_enchantment.me.info.enchant.death_as_home.title": "视死如归",
-  "command.more_enchantment.me.info.enchant.death_as_home.context": "适用于：胸甲\n免疫一次致命伤害，冷却75秒",
+  "command.more_enchantment.me.info.enchant.death_as_home.context": "适用于：胸甲\n免疫一次致命伤害，冷却80秒",
   "command.more_enchantment.me.info.enchant.area_destruction.title": "盾构",
-  "command.more_enchantment.me.info.enchant.area_destruction.context": "适用于：镐\n扩大镐工具的挖掘范围（3 * 3），代价消耗3点耐久"
+  "command.more_enchantment.me.info.enchant.area_destruction.context": "适用于：镐\n扩大镐工具的挖掘范围（3 * 3），代价消耗3点耐久",
+  "command.more_enchantment.me.info.enchant.backstabber.title": "背刺杀手",
+  "command.more_enchantment.me.info.enchant.backstabber.context":"适用于：靴子\n生物处于背身时近战武器普通攻击后增加百分之40的伤害",
+  "command.more_enchantment.me.info.enchant.lostcurse.title": "丢失诅咒",
+  "command.more_enchantment.me.info.enchant.lostcurse.context": "适用于：拥有耐久的物品\n被诅咒的物品一旦成为掉落物便会消失",
+  "command.more_enchantment.me.info.enchant.seacurse.title": "海洋诅咒",
+  "command.more_enchantment.me.info.enchant.seacurse.context": "适用于：拥有耐久的物品\n被诅咒的物品一旦放在身上便会被海洋厌恶"
 }

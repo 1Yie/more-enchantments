@@ -10,6 +10,8 @@ import net.minecraft.util.Identifier;
 public class ItemRegister {
     public static final Item CONTAINER_OF_HEART = new ContainerOfHeart(new FabricItemSettings());
 
+
+
     public static void register() {
         Registry.register(Registries.ITEM, new Identifier(MoreEnchantments.MOD_ID, "container_of_heart"), CONTAINER_OF_HEART);
     }

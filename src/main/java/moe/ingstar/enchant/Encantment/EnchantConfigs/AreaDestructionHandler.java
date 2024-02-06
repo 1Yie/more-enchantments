@@ -80,6 +80,7 @@ public class AreaDestructionHandler {
                 }
             }
         }
+        player.getMainHandStack().damage(2, player, (p -> p.sendToolBreakStatus(Hand.MAIN_HAND)));
     }
 
     private static void destroyBlocksVertically(World world, PlayerEntity player, BlockPos pos, Direction playerFacing) {

@@ -16,6 +16,9 @@
   "enchantment.more_enchantments.absolute_immunity": "Absolute Immunity",
   "enchantment.more_enchantments.death_as_home": "Death As Home",
   "enchantment.more_enchantments.area_destruction": "Area Destruction",
+  "enchantment.more_enchantments.backstabber": "Backstabber",
+  "enchantment.more_enchantments.lostcurse": "Lost Curse",
+  "enchantment.more_enchantments.seacurse": "Sea Curse",
 
   "effect.more_enchantments.tetanus": "Tetanus",
 
@@ -36,6 +39,11 @@
 
   "category.more_enchantment.enchant": "More Enchantment - Key Control",
   "key.enchant.toggle_area_destruction": "Area Destruction - Toggle Area Destruction",
+
+  "death.seacurse.killed": "%s was engulfed by the sea",
+  "death.tetanus.killed": "Tetanus infection claimed the life of %s",
+  "death.soulpenetration.killed": "%s's soul was pierced by %s",
+
 
   "command.more_enchantment.me.info.enchant.none": " ",
   "command.more_enchantment.me.welcome.title": "[More Enchantments]",
@@ -74,9 +82,13 @@
   "command.more_enchantment.me.info.enchant.absolute_immunity.title": "Absolute Immunity",
   "command.more_enchantment.me.info.enchant.absolute_immunity.context": "Applicable to: Chestplates\nChance to be immune to one instance of damage, with the probability increasing with enchantment level",
   "command.more_enchantment.me.info.enchant.death_as_home.title": "Death As Home",
-  "command.more_enchantment.me.info.enchant.death_as_home.context": "Applicable to: Chestplates\nImmunity to one fatal blow, with a 75-second cooldown",
+  "command.more_enchantment.me.info.enchant.death_as_home.context": "Applicable to: Chestplates\nImmunity to one fatal blow, with a 80-second cooldown",
   "command.more_enchantment.me.info.enchant.area_destruction.title": "Area Destruction",
-  "command.more_enchantment.me.info.enchant.area_destruction.context": "Applicable to: Pickaxes\nIncreases the excavation range of the pickaxe tool (3 * 3), at the cost of 3 durability points"
-
-
+  "command.more_enchantment.me.info.enchant.area_destruction.context": "Applicable to: Pickaxes\nIncreases the excavation range of the pickaxe tool (3 * 3), at the cost of 3 durability points",
+  "command.more_enchantment.me.info.enchant.backstabber.title": "Backstabber",
+  "command.more_enchantment.me.info.enchant.backstabber.context": "Applicable to: Boots\nIncreases damage by 40% after a normal melee attack when the creature is backstabbed.",
+  "command.more_enchantment.me.info.enchant.lostcurse.title": "Lost Curse",
+  "command.more_enchantment.me.info.enchant.lostcurse.context": "Applicable to: Durable items\nCursed items will disappear once they become loot.",
+  "command.more_enchantment.me.info.enchant.seacurse.title": "Sea Curse",
+  "command.more_enchantment.me.info.enchant.seacurse.context": "Applicable to: Durable items\nCursed items placed on oneself will be detested by the sea and vanish."
 }

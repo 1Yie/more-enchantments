@@ -3,6 +3,8 @@ package moe.ingstar.enchant.Encantment.EnchantConfigs;
 import moe.ingstar.enchant.Encantment.ModEnchantments;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.event.server.ServerStartCallback;
+import net.fabricmc.fabric.api.event.server.ServerStopCallback;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EquipmentSlot;
@@ -16,19 +18,24 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
+import net.minecraft.util.WorldSavePath;
+import net.minecraft.world.SaveProperties;
+import net.minecraft.world.WorldSaveHandler;
+import net.minecraft.world.level.storage.LevelStorage;
 
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class DeathAsHomeHandler {
-
-
     private static final Map<ServerPlayerEntity, Long> immunityCooldowns = new HashMap<>();
+
     private static final long IMMUNITY_DURATION = 80 * 20;
 
-
     public static void initialize() {
+        ServerTickEvents.END_SERVER_TICK.register(DeathAsHomeHandler::updateCooldowns);
 
         ServerLivingEntityEvents.ALLOW_DAMAGE.register((entity, source, amount) -> {
             if (entity instanceof ServerPlayerEntity player) {
@@ -43,7 +50,6 @@ public class DeathAsHomeHandler {
         ServerTickEvents.END_SERVER_TICK.register(DeathAsHomeHandler::updateCooldowns);
     }
 
-
     private static boolean isUnderImmunityCooldown(ServerPlayerEntity player) {
         return immunityCooldowns.containsKey(player) && player.getServer().getTicks() < immunityCooldowns.get(player);
     }
@@ -53,10 +59,12 @@ public class DeathAsHomeHandler {
 
         player.incrementStat(Stats.USED.getOrCreateStat(Items.TOTEM_OF_UNDYING));
         Criteria.USED_TOTEM.trigger(player, player.getEquippedStack(EquipmentSlot.CHEST));
+
         player.clearStatusEffects();
         player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 500, 1));
         player.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 100, 1));
         player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0));
+        player.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 200, 1));
         player.getWorld().sendEntityStatus(player, (byte) 35);
 
         player.sendMessage(Text.translatable("enchantment.translatable.death_as_home.used"), true);
@@ -73,29 +81,25 @@ public class DeathAsHomeHandler {
 
             if (currentTick.get() >= entry.getValue()) {
                 executeOperation(entry.getKey());
-                NbtHelper.removeNbt(playerArmor, "DeathAsHomeCooldown");
                 return true;
-
             } else {
                 long remainingTime = entry.getValue() - currentTick.get();
-                writeCooldownToArmor(playerArmor, remainingTime / 20);
-                entry.getKey().sendMessage(Text.translatable("enchantment.translatable.death_as_home.cooldown", remainingTime / 20), true);
+
+                long lastSentTime = 0;
+                NbtCompound persistentData = playerArmor.getOrCreateNbt();
+                if (persistentData != null && persistentData.contains("LastSentTime")) {
+                    lastSentTime = persistentData.getLong("LastSentTime");
+                }
+
+                if (remainingTime / 20 != lastSentTime) {
+                    entry.getKey().sendMessage(Text.translatable("enchantment.translatable.death_as_home.cooldown", remainingTime / 20), true);
+                    persistentData.putLong("LastSentTime", remainingTime / 20);
+                    playerArmor.setNbt(persistentData);
+                }
 
                 return false;
             }
-
         });
-    }
-
-    private static void writeCooldownToArmor(ItemStack armor, long cooldownEndTime) {
-        NbtCompound tag = armor.getOrCreateNbt();
-
-        tag.putLong("DeathAsHomeCooldown", cooldownEndTime);
-        armor.setNbt(tag);
-
-        if (tag.getLong("DeathAsHomeCooldown") == 0L) {
-            NbtHelper.removeNbt(armor, "DeathAsHomeCooldown");
-        }
     }
 
     private static boolean hasRequiredEnchantment(PlayerEntity player) {
