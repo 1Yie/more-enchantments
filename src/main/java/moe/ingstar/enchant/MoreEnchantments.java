@@ -7,8 +7,6 @@ import moe.ingstar.enchant.Item.ItemRegister;
 import moe.ingstar.enchant.StatusEffect.BuffEffectRegistry;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
-import net.minecraft.text.Text;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,6 +33,9 @@ public class MoreEnchantments implements ModInitializer {
 		AbsoluteImmunityHandler.initialize();
 		DeathAsHomeHandler.initialize();
 		AreaDestructionHandler.initialize();
+		BackstabberHandler.initialize();
+		LostCurseHandler.onInitialize();
+		SeaCurseHandler.onInitialize();
 
 		BuffEffectRegistry.register();
 	}

@@ -16,12 +16,12 @@ public class TetanusBladeEnchantHandler {
                 ItemStack itemStack = player.getMainHandStack();
 
                 if (hasRequiredEnchantment(itemStack)) {
-                    if (world.random.nextInt(100) < 1) {
+                    if (world.random.nextInt(50) < 1) {
                         ((LivingEntity) entity).addStatusEffect(
                                 new StatusEffectInstance(
                                         BuffEffectRegistry.TETANUS_BUFF_EFFECT,
-                                        6 * 20,
-                                        4,
+                                        4 * 20,
+                                        3,
                                         true,
                                         true
                                 ));

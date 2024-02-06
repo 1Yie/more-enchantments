@@ -1,5 +1,7 @@
 package moe.ingstar.enchant.Encantment;
 
+import moe.ingstar.enchant.Encantment.ModDamageSource.SoulPenetrationDamageSource;
+import net.minecraft.client.sound.Sound;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -14,6 +16,9 @@ import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolItem;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 
 
 public class SoulPenetrationEnchant extends Enchantment {
@@ -49,7 +54,7 @@ public class SoulPenetrationEnchant extends Enchantment {
 
             if (armorValue > 0 && level >= 1 && level <= 4) {
                 float damageIncreasePercentage = calculateDamageIncreasePercentage(user, target, level, armorValue);
-                target.damage(user.getDamageSources().mobAttack(user), damageIncreasePercentage);
+                target.damage(new SoulPenetrationDamageSource(target, user), damageIncreasePercentage);
             }
         }
     }
@@ -65,7 +70,7 @@ public class SoulPenetrationEnchant extends Enchantment {
         float attackDamage = toolItem.getMaterial().getAttackDamage() +
                 EnchantmentHelper.getAttackDamage(heldItem, EntityGroup.DEFAULT);
 
-        float percentage = level * 0.01F + 0.10F;
+        float percentage = level * 0.01F + 0.20F;
 
         return attackDamage * armorValue * percentage;
     }
