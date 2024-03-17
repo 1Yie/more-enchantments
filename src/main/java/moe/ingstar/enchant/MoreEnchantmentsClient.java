@@ -1,7 +1,7 @@
 package moe.ingstar.enchant;
 
 import io.netty.buffer.Unpooled;
-import moe.ingstar.enchant.Encantment.ModEnchantments;
+import moe.ingstar.enchant.Registry.ModEnchantments;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;

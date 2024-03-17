@@ -1,6 +1,6 @@
 package moe.ingstar.enchant.Encantment;
 
-import moe.ingstar.enchant.Encantment.EnchantConfigs.DamageData;
+import moe.ingstar.enchant.Encantment.Util.DamageData;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
@@ -11,7 +11,7 @@ import net.minecraft.item.SwordItem;
 
 public class LeechEnchant extends Enchantment {
 
-    protected LeechEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public LeechEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(weight, target, slotTypes);
     }
 

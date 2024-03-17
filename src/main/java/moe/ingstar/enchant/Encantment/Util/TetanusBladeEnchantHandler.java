@@ -1,7 +1,7 @@
-package moe.ingstar.enchant.Encantment.EnchantConfigs;
+package moe.ingstar.enchant.Encantment.Util;
 
-import moe.ingstar.enchant.Encantment.ModEnchantments;
-import moe.ingstar.enchant.StatusEffect.BuffEffectRegistry;
+import moe.ingstar.enchant.Registry.BuffEffectRegistry;
+import moe.ingstar.enchant.Registry.ModEnchantments;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;

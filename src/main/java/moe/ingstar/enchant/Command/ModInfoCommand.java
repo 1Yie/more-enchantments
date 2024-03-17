@@ -8,10 +8,13 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.ClickEvent;
+import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.text.Texts;
 import net.minecraft.util.Formatting;
 
+import java.awt.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
@@ -57,7 +60,6 @@ public class ModInfoCommand {
                 }));
     }
 
-
     private static void sendInfo(ServerCommandSource source) {
         source.sendMessage(Text.translatable("command.more_enchantment.me.info.title").copy().formatted(Formatting.BOLD).formatted(Formatting.BLUE));
         source.sendMessage(Text.translatable("command.more_enchantment.me.info.context").copy().formatted(Formatting.BOLD).formatted(Formatting.ITALIC));
@@ -65,65 +67,7 @@ public class ModInfoCommand {
     }
 
     private static void sendInfoToEnchant(ServerCommandSource source) {
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.life_steal.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.life_steal.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.thump.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.thump.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.saturation.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.saturation.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.soul_penetration.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.soul_penetration.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.disarm.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.disarm.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.leech.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.leech.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.diamond_luck.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.diamond_luck.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.health_boost_armor.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.health_boost_armor.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.midas_touch.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.midas_touch.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.arrow_shield.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.arrow_shield.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.kiss_of_death.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.kiss_of_death.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.container_of_heart.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.container_of_heart.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.benevolence.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.benevolence.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.benevolence.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.benevolence.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.absolute_immunity.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.absolute_immunity.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.death_as_home.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.death_as_home.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.area_destruction.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.area_destruction.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.backstabber.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.backstabber.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.lostcurse.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.lostcurse.context"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.none"));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.seacurse.title").copy().formatted(Formatting.BOLD));
-        source.sendMessage(Text.translatable("command.more_enchantment.me.info.enchant.seacurse.context"));
-
+        source.sendMessage(Text.translatable("command.more_enchantment.enchant.context").formatted(Formatting.BOLD));
+        source.sendMessage(Text.translatable("command.more_enchantment.website").setStyle(Style.EMPTY.withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL,"https://wiki.ingstar.moe/mods/me.html")).withBold(true)));
     }
 }

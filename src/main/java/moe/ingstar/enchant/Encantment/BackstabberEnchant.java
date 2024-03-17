@@ -7,7 +7,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 
 public class BackstabberEnchant extends Enchantment {
-    protected BackstabberEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public BackstabberEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(rarity, target, slotTypes);
     }
 

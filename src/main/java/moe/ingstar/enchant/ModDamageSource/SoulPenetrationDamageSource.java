@@ -1,4 +1,4 @@
-package moe.ingstar.enchant.Encantment.ModDamageSource;
+package moe.ingstar.enchant.ModDamageSource;
 
 
 import net.minecraft.entity.Entity;

@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.PickaxeItem;
 
 public class MidasTouchEnchant extends Enchantment {
-    protected MidasTouchEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public MidasTouchEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(weight, target, slotTypes);
     }
     @Override

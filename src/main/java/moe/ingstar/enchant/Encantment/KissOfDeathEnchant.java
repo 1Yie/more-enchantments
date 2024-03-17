@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 
 public class KissOfDeathEnchant extends Enchantment {
-    protected KissOfDeathEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public KissOfDeathEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(rarity, target, slotTypes);
     }
 

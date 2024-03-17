@@ -1,10 +1,8 @@
-package moe.ingstar.enchant.Encantment.EnchantConfigs;
+package moe.ingstar.enchant.Encantment.Util;
 
-import moe.ingstar.enchant.Encantment.ModEnchantments;
+import moe.ingstar.enchant.Registry.ModEnchantments;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
-import net.fabricmc.fabric.api.event.server.ServerStartCallback;
-import net.fabricmc.fabric.api.event.server.ServerStopCallback;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EquipmentSlot;
@@ -18,15 +16,10 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
-import net.minecraft.util.WorldSavePath;
-import net.minecraft.world.SaveProperties;
-import net.minecraft.world.WorldSaveHandler;
-import net.minecraft.world.level.storage.LevelStorage;
 
-import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
+
 import java.util.concurrent.atomic.AtomicLong;
 
 public class DeathAsHomeHandler {

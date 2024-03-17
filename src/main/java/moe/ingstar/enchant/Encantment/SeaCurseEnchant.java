@@ -5,7 +5,7 @@ import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 
 public class SeaCurseEnchant extends Enchantment {
-    protected SeaCurseEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public SeaCurseEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(weight, target, slotTypes);
     }
 

@@ -7,7 +7,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 
 public class DeathAsHomeEnchant extends Enchantment {
-    protected DeathAsHomeEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public DeathAsHomeEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(rarity, target, slotTypes);
     }
 

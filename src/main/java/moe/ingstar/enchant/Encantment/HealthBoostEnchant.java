@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 
 public class HealthBoostEnchant extends Enchantment {
 
-    protected HealthBoostEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public HealthBoostEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(weight, target, slotTypes);
     }
     @Override

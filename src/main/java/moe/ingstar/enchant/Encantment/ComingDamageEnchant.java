@@ -3,12 +3,11 @@ package moe.ingstar.enchant.Encantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.AxeItem;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.SwordItem;
 
-public class TetanusBladeEnchant extends Enchantment {
-    public TetanusBladeEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+public class ComingDamageEnchant extends Enchantment {
+    public ComingDamageEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(rarity, target, slotTypes);
     }
 
@@ -19,7 +18,7 @@ public class TetanusBladeEnchant extends Enchantment {
 
     @Override
     public int getMaxPower(int level) {
-        return super.getMaxPower(level) * 10;
+        return level * 6;
     }
 
     @Override
@@ -29,6 +28,6 @@ public class TetanusBladeEnchant extends Enchantment {
 
     @Override
     public boolean isAcceptableItem(ItemStack stack) {
-        return stack.getItem() instanceof SwordItem || stack.getItem() instanceof AxeItem;
+        return stack.getItem() instanceof ArmorItem armorItem && armorItem.getSlotType() == EquipmentSlot.HEAD;
     }
 }

@@ -8,7 +8,7 @@ import net.minecraft.item.PickaxeItem;
 
 
 public class DiamondLuckEnchant extends Enchantment {
-    protected DiamondLuckEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public DiamondLuckEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(weight, target, slotTypes);
     }
 

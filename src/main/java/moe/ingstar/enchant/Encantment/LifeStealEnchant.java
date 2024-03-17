@@ -16,7 +16,7 @@ import net.minecraft.util.Formatting;
 import java.util.Random;
 
 public class LifeStealEnchant extends Enchantment {
-    protected LifeStealEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public LifeStealEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(weight, target, slotTypes);
     }
 

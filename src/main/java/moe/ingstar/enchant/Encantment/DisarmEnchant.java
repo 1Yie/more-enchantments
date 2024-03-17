@@ -12,7 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 
 public class DisarmEnchant extends Enchantment {
-    protected DisarmEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public DisarmEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(weight, target, slotTypes);
     }
 

@@ -1,4 +1,4 @@
-package moe.ingstar.enchant.Encantment.EnchantConfigs;
+package moe.ingstar.enchant.Encantment.Util;
 
 
 public class DamageData {

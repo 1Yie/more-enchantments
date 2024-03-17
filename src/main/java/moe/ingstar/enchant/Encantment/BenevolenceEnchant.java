@@ -9,7 +9,7 @@ import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.SwordItem;
 
 public class BenevolenceEnchant extends Enchantment {
-    protected BenevolenceEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public BenevolenceEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(rarity, target, slotTypes);
     }
 

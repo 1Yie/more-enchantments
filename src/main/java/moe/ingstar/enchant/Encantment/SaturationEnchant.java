@@ -13,7 +13,7 @@ import net.minecraft.item.SwordItem;
 import java.util.Random;
 
 public class SaturationEnchant extends Enchantment {
-    protected SaturationEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public SaturationEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(weight, target, slotTypes);
     }
 

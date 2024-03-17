@@ -1,5 +1,4 @@
-package moe.ingstar.enchant.Encantment.ModDamageSource;
-
+package moe.ingstar.enchant.ModDamageSource;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -13,17 +12,21 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.HashMap;
+import java.util.Map;
 
-public class TetanusDamageSource extends DamageSource {
-    public static final RegistryEntry<DamageType> DAMAGE_TYPE_REGISTRY_ENTRY = RegistryEntry.of(new DamageType("tetanus_killed", 0.1F, DamageEffects.BURNING));
+public class ComingDangerDamageSource extends DamageSource {
+    private static final Map<PlayerEntity, Float> pendingDamages = new HashMap<>();
 
-    public TetanusDamageSource(@Nullable Entity source, @Nullable Entity attacker) {
+    public static final RegistryEntry<DamageType> DAMAGE_TYPE_REGISTRY_ENTRY = RegistryEntry.of(new DamageType("coming_danger_killed", 0.1F, DamageEffects.BURNING));
+
+    public ComingDangerDamageSource(@Nullable Entity source, @Nullable Entity attacker) {
         super(DAMAGE_TYPE_REGISTRY_ENTRY, source, attacker);
     }
 
     @Override
     public Text getDeathMessage(LivingEntity killed) {
-        return Text.translatable("death.tetanus.killed", killed.getDisplayName());
+        return Text.translatable("death.comingdanger.killed", killed.getDisplayName());
     }
 
     public static boolean playSound(PlayerEntity player) {
@@ -34,5 +37,4 @@ public class TetanusDamageSource extends DamageSource {
         }
         return false;
     }
-
 }

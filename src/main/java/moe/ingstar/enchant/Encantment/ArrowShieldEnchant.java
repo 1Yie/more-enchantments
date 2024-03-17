@@ -17,7 +17,7 @@ import net.minecraft.item.ItemStack;
 import java.util.Random;
 
 public class ArrowShieldEnchant extends Enchantment {
-    protected ArrowShieldEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public ArrowShieldEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(rarity, target, slotTypes);
     }
 

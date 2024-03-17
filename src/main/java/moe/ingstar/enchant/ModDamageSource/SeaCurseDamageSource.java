@@ -1,4 +1,4 @@
-package moe.ingstar.enchant.Encantment.ModDamageSource;
+package moe.ingstar.enchant.ModDamageSource;
 
 
 import net.minecraft.entity.Entity;
@@ -7,7 +7,6 @@ import net.minecraft.entity.damage.DamageEffects;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.DamageType;
 
-import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundCategory;

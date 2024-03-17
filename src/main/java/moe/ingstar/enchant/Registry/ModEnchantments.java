@@ -1,10 +1,10 @@
-package moe.ingstar.enchant.Encantment;
+package moe.ingstar.enchant.Registry;
 
+import moe.ingstar.enchant.Encantment.*;
 import moe.ingstar.enchant.MoreEnchantments;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
-
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -31,6 +31,8 @@ public class ModEnchantments {
     public static final Identifier BACKSTABBER_ID = new Identifier(MoreEnchantments.MOD_ID, "backstabber");
     public static final Identifier LOSTCURSE_ID = new Identifier(MoreEnchantments.MOD_ID, "lostcurse");
     public static final Identifier SEACURSE_ID = new Identifier(MoreEnchantments.MOD_ID, "seacurse");
+    public static final Identifier COMING_DAMAGE_ID = new Identifier(MoreEnchantments.MOD_ID, "coming_damage");
+    public static final Identifier CONFUSION_ID = new Identifier(MoreEnchantments.MOD_ID, "confusion");
 
     public static final Enchantment ARROW_SHIELD = new ArrowShieldEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
@@ -73,6 +75,10 @@ public class ModEnchantments {
             EnchantmentTarget.VANISHABLE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
     public static final Enchantment SEACURSE = new SeaCurseEnchant(Enchantment.Rarity.VERY_RARE,
             EnchantmentTarget.VANISHABLE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+    public static final Enchantment COMING_DAMAGE = new ComingDamageEnchant(Enchantment.Rarity.RARE,
+            EnchantmentTarget.ARMOR, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+    public static final Enchantment CONFUSION = new ConfusionEnchant(Enchantment.Rarity.RARE,
+            EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
 
     public static void registerEnchantments() {
@@ -96,5 +102,7 @@ public class ModEnchantments {
         Registry.register(Registries.ENCHANTMENT, BACKSTABBER_ID, BACKSTABBER);
         Registry.register(Registries.ENCHANTMENT, LOSTCURSE_ID, LOSTCURSE);
         Registry.register(Registries.ENCHANTMENT, SEACURSE_ID, SEACURSE);
+        Registry.register(Registries.ENCHANTMENT, COMING_DAMAGE_ID, COMING_DAMAGE);
+        Registry.register(Registries.ENCHANTMENT, CONFUSION_ID, CONFUSION);
     }
 }

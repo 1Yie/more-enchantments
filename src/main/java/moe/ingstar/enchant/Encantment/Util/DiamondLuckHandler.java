@@ -1,9 +1,7 @@
-package moe.ingstar.enchant.Encantment.EnchantConfigs;
+package moe.ingstar.enchant.Encantment.Util;
 
-import moe.ingstar.enchant.Encantment.ModEnchantments;
+import moe.ingstar.enchant.Registry.ModEnchantments;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
@@ -11,9 +9,7 @@ import net.minecraft.item.Items;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import java.util.HashSet;
 import java.util.Random;
-import java.util.Set;
 
 public class DiamondLuckHandler {
 

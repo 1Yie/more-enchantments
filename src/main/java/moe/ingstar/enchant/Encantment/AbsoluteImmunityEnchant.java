@@ -7,7 +7,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 
 public class AbsoluteImmunityEnchant extends Enchantment {
-    protected AbsoluteImmunityEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public AbsoluteImmunityEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(rarity, target, slotTypes);
     }
     @Override

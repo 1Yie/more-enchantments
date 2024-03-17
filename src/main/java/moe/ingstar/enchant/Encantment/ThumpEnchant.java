@@ -11,7 +11,7 @@ import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
 
 public class ThumpEnchant extends Enchantment {
-    protected ThumpEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public ThumpEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(weight, target, slotTypes);
     }
 

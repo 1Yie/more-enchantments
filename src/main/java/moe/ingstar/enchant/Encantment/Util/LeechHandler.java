@@ -1,4 +1,4 @@
-package moe.ingstar.enchant.Encantment.EnchantConfigs;
+package moe.ingstar.enchant.Encantment.Util;
 
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.minecraft.entity.LivingEntity;

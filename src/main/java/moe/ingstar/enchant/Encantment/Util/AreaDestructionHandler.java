@@ -1,7 +1,7 @@
-package moe.ingstar.enchant.Encantment.EnchantConfigs;
+package moe.ingstar.enchant.Encantment.Util;
 
-import moe.ingstar.enchant.Encantment.ModEnchantments;
 import moe.ingstar.enchant.MoreEnchantments;
+import moe.ingstar.enchant.Registry.ModEnchantments;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.block.Block;
@@ -26,8 +26,8 @@ import net.minecraft.world.World;
 import java.util.List;
 import java.util.Random;
 
-import static moe.ingstar.enchant.Encantment.EnchantConfigs.DiamondLuckHandler.dropBlocks;
-import static moe.ingstar.enchant.Encantment.EnchantConfigs.DiamondLuckHandler.shouldDropAdditionalDiamond;
+import static moe.ingstar.enchant.Encantment.Util.DiamondLuckHandler.dropBlocks;
+import static moe.ingstar.enchant.Encantment.Util.DiamondLuckHandler.shouldDropAdditionalDiamond;
 
 public class AreaDestructionHandler {
 

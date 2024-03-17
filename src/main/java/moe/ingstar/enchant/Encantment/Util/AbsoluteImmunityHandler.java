@@ -1,6 +1,6 @@
-package moe.ingstar.enchant.Encantment.EnchantConfigs;
+package moe.ingstar.enchant.Encantment.Util;
 
-import moe.ingstar.enchant.Encantment.ModEnchantments;
+import moe.ingstar.enchant.Registry.ModEnchantments;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.minecraft.enchantment.EnchantmentHelper;
 

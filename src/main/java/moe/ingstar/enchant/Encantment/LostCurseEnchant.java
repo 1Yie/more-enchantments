@@ -6,7 +6,7 @@ import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 
 public class LostCurseEnchant extends Enchantment {
-    protected LostCurseEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public LostCurseEnchant(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(weight, target, slotTypes);
     }
 

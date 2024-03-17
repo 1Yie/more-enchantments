@@ -8,7 +8,7 @@ import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ShovelItem;
 
 public class AreaDestructionEnchant extends Enchantment {
-    protected AreaDestructionEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+    public AreaDestructionEnchant(Rarity rarity, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(rarity, target, slotTypes);
     }
 

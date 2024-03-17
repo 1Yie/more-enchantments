@@ -1,22 +1,15 @@
 package moe.ingstar.enchant.StatusEffect;
 
-import moe.ingstar.enchant.Encantment.ModDamageSource.TetanusDamageSource;
-import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
-import net.minecraft.entity.Entity;
+import moe.ingstar.enchant.ModDamageSource.TetanusDamageSource;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import org.w3c.dom.Text;
 
 import java.util.Random;
 
 public class TetanusBuffEffect extends StatusEffect {
-    protected TetanusBuffEffect(StatusEffectCategory category, int color) {
+    public TetanusBuffEffect(StatusEffectCategory category, int color) {
         super(category, color);
     }
 
