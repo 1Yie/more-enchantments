@@ -36,6 +36,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     public abstract void addExperience(int experience);
 
 
+    @Unique
     private boolean isAddingExperience = false;
 
     protected PlayerEntityMixin(EntityType<? extends LivingEntity> entityType, World world) {

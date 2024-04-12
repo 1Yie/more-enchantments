@@ -3,8 +3,10 @@ package moe.ingstar.enchant.Command;
 import com.google.common.collect.Lists;
 
 import com.mojang.brigadier.CommandDispatcher;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 
+import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -26,7 +28,7 @@ public class ModInfoCommand {
             CompletableFuture.runAsync(() -> {
                 try {
                     CompletableFuture.delayedExecutor(2000, TimeUnit.MILLISECONDS).execute(() -> {
-                        server.getPlayerManager().getPlayerList().forEach(ModInfoCommand::sendWelcomeMessage);
+                    server.getPlayerManager().getPlayerList().forEach(ModInfoCommand::sendWelcomeMessage);
                     });
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -67,7 +69,7 @@ public class ModInfoCommand {
     }
 
     private static void sendInfoToEnchant(ServerCommandSource source) {
-        source.sendMessage(Text.translatable("command.more_enchantment.enchant.context").formatted(Formatting.BOLD));
+        source.sendMessage(Text.translatable("command.more_enchantment.enchant.context").formatted(Formatting.BOLD).formatted(Formatting.BLUE));
         source.sendMessage(Text.translatable("command.more_enchantment.website").setStyle(Style.EMPTY.withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL,"https://wiki.ingstar.moe/mods/me.html")).withBold(true)));
     }
 }

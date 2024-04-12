@@ -15,8 +15,8 @@ public class BuffEffectRegistry {
 
     public static final StatusEffect TETANUS_BUFF_EFFECT = new TetanusBuffEffect(StatusEffectCategory.BENEFICIAL, 0xA52A2A);
     public static final StatusEffect COMING_DANGER_EFFECT = new ComingDangerEffect(StatusEffectCategory.BENEFICIAL, 0xFFC800);
-
     public static final StatusEffect CONFUSION_EFFECT = new ConfusionEffect(StatusEffectCategory.BENEFICIAL, 0xFFC800);
+
     public static void register() {
         registerHandler();
 

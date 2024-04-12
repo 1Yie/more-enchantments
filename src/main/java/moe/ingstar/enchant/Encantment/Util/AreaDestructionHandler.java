@@ -55,7 +55,6 @@ public class AreaDestructionHandler {
                 }
             }
         });
-
     }
 
     private static void destroyBlocksHorizontally(World world, PlayerEntity player, BlockPos pos, Direction playerFacing) {

@@ -28,8 +28,6 @@ public class TetanusBuffEffect extends StatusEffect {
                     TetanusDamageSource.playSound((PlayerEntity) entity);
                 }
             }
-
-
         }
     }
 
