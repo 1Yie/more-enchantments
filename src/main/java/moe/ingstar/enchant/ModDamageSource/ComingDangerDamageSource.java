@@ -12,12 +12,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class ComingDangerDamageSource extends DamageSource {
-    private static final Map<PlayerEntity, Float> pendingDamages = new HashMap<>();
-
     public static final RegistryEntry<DamageType> DAMAGE_TYPE_REGISTRY_ENTRY = RegistryEntry.of(new DamageType("coming_danger_killed", 0.1F, DamageEffects.BURNING));
 
     public ComingDangerDamageSource(@Nullable Entity source, @Nullable Entity attacker) {

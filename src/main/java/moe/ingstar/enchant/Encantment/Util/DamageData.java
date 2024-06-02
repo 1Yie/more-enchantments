@@ -1,6 +1,4 @@
 package moe.ingstar.enchant.Encantment.Util;
-
-
 public class DamageData {
     private static float damage;
 
