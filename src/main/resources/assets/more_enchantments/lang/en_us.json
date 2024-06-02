@@ -20,7 +20,8 @@
   "enchantment.more_enchantments.lostcurse": "Lost Curse",
   "enchantment.more_enchantments.seacurse": "Sea Curse",
   "enchantment.more_enchantments.coming_damage": "Coming Damage",
-  "enchantment.more_enchantments.confusion": "Surrender To Me",
+  "enchantment.more_enchantments.confusion": "Surrender To Owner",
+  "enchantment.more_enchantments.death_backtrack": "Death Backtrack",
 
   "effect.more_enchantments.tetanus": "Tetanus",
   "effect.more_enchantments.coming_danger": "Danger is coming",
