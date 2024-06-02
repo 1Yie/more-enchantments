@@ -24,12 +24,10 @@ public class ComingDangerDamageSource extends DamageSource {
         return Text.translatable("death.comingdanger.killed", killed.getDisplayName());
     }
 
-    public static boolean playSound(PlayerEntity player) {
+    public static void playSound(PlayerEntity player) {
         if (player.hurtTime == 10) {
             player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
                     SoundEvents.ENTITY_PLAYER_HURT, SoundCategory.PLAYERS, 1.0f, 1.0f);
-            return true;
         }
-        return false;
     }
 }
