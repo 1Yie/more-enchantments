@@ -33,6 +33,7 @@ public class ModEnchantments {
     public static final Identifier SEACURSE_ID = new Identifier(MoreEnchantments.MOD_ID, "seacurse");
     public static final Identifier COMING_DAMAGE_ID = new Identifier(MoreEnchantments.MOD_ID, "coming_damage");
     public static final Identifier CONFUSION_ID = new Identifier(MoreEnchantments.MOD_ID, "confusion");
+    public static final Identifier DEATH_BACKTRACK_ID = new Identifier(MoreEnchantments.MOD_ID, "death_backtrack");
 
     public static final Enchantment ARROW_SHIELD = new ArrowShieldEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
@@ -80,6 +81,9 @@ public class ModEnchantments {
     public static final Enchantment CONFUSION = new ConfusionEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
+    public static final Enchantment DEATH_BACKTRACK = new DeathBacktrackEnchant(Enchantment.Rarity.RARE,
+            EnchantmentTarget.ARMOR, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+
 
     public static void registerEnchantments() {
         Registry.register(Registries.ENCHANTMENT, ARROW_SHIELD_ID, ARROW_SHIELD);
@@ -104,5 +108,6 @@ public class ModEnchantments {
         Registry.register(Registries.ENCHANTMENT, SEACURSE_ID, SEACURSE);
         Registry.register(Registries.ENCHANTMENT, COMING_DAMAGE_ID, COMING_DAMAGE);
         Registry.register(Registries.ENCHANTMENT, CONFUSION_ID, CONFUSION);
+        Registry.register(Registries.ENCHANTMENT, DEATH_BACKTRACK_ID, DEATH_BACKTRACK);
     }
 }

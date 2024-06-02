@@ -21,6 +21,7 @@
   "enchantment.more_enchantments.seacurse": "海洋诅咒",
   "enchantment.more_enchantments.coming_damage": "预测危险",
   "enchantment.more_enchantments.confusion": "臣服于我",
+  "enchantment.more_enchantments.death_backtrack": "死亡回溯",
 
   "effect.more_enchantments.tetanus": "破伤风",
   "effect.more_enchantments.coming_danger": "危险来临",
@@ -33,6 +34,7 @@
   "enchantment.translatable.death_as_home.used": "视死如归: 抵挡一次致命伤害",
   "enchantment.translatable.death_as_home.done": "视死如归: 冷却结束",
   "enchantment.translatable.death_as_home.cooldown": "视死如归冷却: %s 秒",
+  "enchantment.translatable.death_backtrack.cooldown": "死亡回溯冷却: %s 秒",
 
   "message.enchant.area_destruction": "盾构状态：%s",
   "yes": "开启",
