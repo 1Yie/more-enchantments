@@ -32,7 +32,7 @@ public class DeathAsHomeHandler {
 
         ServerLivingEntityEvents.ALLOW_DAMAGE.register((entity, source, amount) -> {
             if (entity instanceof ServerPlayerEntity player) {
-                if (player.getHealth() <= amount && !isUnderImmunityCooldown(player) && hasRequiredEnchantment(player)) {
+                if (player.getHealth() - amount <= 0 && !isUnderImmunityCooldown(player) && hasRequiredEnchantment(player)) {
                     startImmunity(player);
                     return false;
                 }
@@ -95,7 +95,7 @@ public class DeathAsHomeHandler {
         });
     }
 
-    private static boolean hasRequiredEnchantment(PlayerEntity player) {
+    public static boolean hasRequiredEnchantment(PlayerEntity player) {
         for (ItemStack itemStack : player.getArmorItems()) {
             if (EnchantmentHelper.getLevel(ModEnchantments.DEATH_AS_HOME, itemStack) > 0) {
                 return true;
