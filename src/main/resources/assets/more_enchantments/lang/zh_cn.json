@@ -22,6 +22,7 @@
   "enchantment.more_enchantments.coming_damage": "预测危险",
   "enchantment.more_enchantments.confusion": "臣服于我",
   "enchantment.more_enchantments.death_backtrack": "死亡回溯",
+  "enchantment.more_enchantments.behead": "斩杀",
 
   "effect.more_enchantments.tetanus": "破伤风",
   "effect.more_enchantments.coming_danger": "危险来临",
@@ -35,6 +36,7 @@
   "enchantment.translatable.death_as_home.done": "视死如归: 冷却结束",
   "enchantment.translatable.death_as_home.cooldown": "视死如归冷却: %s 秒",
   "enchantment.translatable.death_backtrack.cooldown": "死亡回溯冷却: %s 秒",
+
 
   "message.enchant.area_destruction": "盾构状态：%s",
   "yes": "开启",
@@ -50,6 +52,7 @@
   "death.tetanus.killed": "破伤风侵染%s全身致死",
   "death.soulpenetration.killed": "%s被%s击穿了灵魂",
   "death.comingdanger.killed": "%s预测了危险来临，但无济于事",
+  "death.behead.killed": "%s被斩杀终结了生命",
 
   "command.more_enchantment.enchant.context": "访问 WIKI 获取更多信息",
   "command.more_enchantment.website": "https://wiki.ingstar.moe/mods/me.html",
