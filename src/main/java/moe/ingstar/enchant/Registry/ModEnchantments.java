@@ -34,6 +34,7 @@ public class ModEnchantments {
     public static final Identifier COMING_DAMAGE_ID = new Identifier(MoreEnchantments.MOD_ID, "coming_damage");
     public static final Identifier CONFUSION_ID = new Identifier(MoreEnchantments.MOD_ID, "confusion");
     public static final Identifier DEATH_BACKTRACK_ID = new Identifier(MoreEnchantments.MOD_ID, "death_backtrack");
+    public static final Identifier BEHEAD_ID = new Identifier(MoreEnchantments.MOD_ID, "behead");
 
     public static final Enchantment ARROW_SHIELD = new ArrowShieldEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
@@ -68,6 +69,8 @@ public class ModEnchantments {
     public static final Enchantment DEATH_AS_HOME = new DeathAsHomeEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.ARMOR, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
     public static final Enchantment AREA_DESTRUCTION = new AreaDestructionEnchant(Enchantment.Rarity.RARE,
+            EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+    public static final Enchantment BEHEAD = new BeheadEnchant(Enchantment.Rarity.RARE,
             EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
     public static final Enchantment BACKSTABBER = new BackstabberEnchant(Enchantment.Rarity.RARE,
@@ -109,5 +112,6 @@ public class ModEnchantments {
         Registry.register(Registries.ENCHANTMENT, COMING_DAMAGE_ID, COMING_DAMAGE);
         Registry.register(Registries.ENCHANTMENT, CONFUSION_ID, CONFUSION);
         Registry.register(Registries.ENCHANTMENT, DEATH_BACKTRACK_ID, DEATH_BACKTRACK);
+        Registry.register(Registries.ENCHANTMENT, BEHEAD_ID, BEHEAD);
     }
 }

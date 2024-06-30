@@ -74,6 +74,7 @@ public class MoreEnchantments implements ModInitializer {
 		AreaDestructionHandler.initialize();
 		BackstabberHandler.initialize();
 		DeathBacktrackHandler.initialize();
+		BeheadHandler.initialize();
 
 		LostCurseHandler.onInitialize();
 		SeaCurseHandler.onInitialize();
